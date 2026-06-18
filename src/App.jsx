@@ -47,7 +47,17 @@ export default function App() {
       .from('players')
       .select('*')
       .order('score', { ascending: false })
-    if (data) setPlayers(data)
+    if (data) {
+      setPlayers(data)
+      // If current player no longer exists in DB (e.g. after a reset), clear session
+      setPlayer((current) => {
+        if (current && !data.find((p) => p.id === current.id)) {
+          sessionStorage.removeItem('lsq_player')
+          return null
+        }
+        return current
+      })
+    }
   }, [])
 
   useEffect(() => {

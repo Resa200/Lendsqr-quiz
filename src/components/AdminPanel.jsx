@@ -126,7 +126,7 @@ export default function AdminPanel({ gameState, players }) {
               <button
                 className="admin-btn admin-btn-primary"
                 onClick={startGame}
-                disabled={loading || players.length === 0}
+                disabled={loading}
               >
                 🚀 Start Game ({players.length} players)
               </button>
