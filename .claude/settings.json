@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(cd \"c:\\\\Users\\\\DELL\\\\Downloads\\\\Game\"; Get-ChildItem -Recurse -Exclude node_modules,dist | Where-Object { -not $_.FullName.Contains\\('\\\\node_modules\\\\'\\) -and -not $_.FullName.Contains\\('\\\\dist\\\\'\\) } | Select-Object FullName | ForEach-Object { $_.FullName.Replace\\(\"c:\\\\Users\\\\DELL\\\\Downloads\\\\Game\\\\\", \"\"\\) })"
+    ]
+  }
+}

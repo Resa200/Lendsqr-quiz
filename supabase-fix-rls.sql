@@ -1,0 +1,4 @@
+-- Run this in Supabase SQL Editor to fix the RLS error
+ALTER TABLE game_state DISABLE ROW LEVEL SECURITY;
+ALTER TABLE players DISABLE ROW LEVEL SECURITY;
+ALTER TABLE player_answers DISABLE ROW LEVEL SECURITY;
